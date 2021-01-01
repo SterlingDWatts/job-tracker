@@ -4,56 +4,7 @@ import Column from "../../components/Column/Column";
 import LargeCard from "../../components/LargeCard/LargeCard";
 import "./ApplicationsPage.css";
 
-const jobApps = [
-  {
-    id: 0,
-    column: [{ id: 0, date: new Date(2020, 4, 13) }],
-    company: "Ultimate Software",
-    job: "Sotware Engineer 2",
-    site: "https://www.ultimatesoftware.com/",
-  },
-  {
-    id: 1,
-    column: [
-      { id: 0, date: new Date(2020, 4, 14) },
-      { id: 3, date: new Date(2020, 4, 14) },
-    ],
-    company: "Art & Logic",
-    job: "Full Stack Web Developer",
-    site: "https://artandlogic.com/",
-  },
-  {
-    id: 2,
-    column: [{ id: 0, date: new Date(2020, 4, 14) }],
-    company: "GitStart",
-    job: "Full Stack JavaScript Developer - Junior",
-    site: "https://www.gitstart.com/",
-  },
-  {
-    id: 3,
-    column: [{ id: 0, date: new Date(2020, 4, 14) }],
-    company: "CyberCoders",
-    job: "Web Developer",
-    site: "https://www.cybercoders.com/",
-  },
-  {
-    id: 4,
-    column: [{ id: 0, date: new Date(2020, 4, 14) }],
-    company: "Digital Media Solutions",
-    job: "Frontend Developer",
-    site: "https://digitalmediasolutions.com/",
-  },
-  {
-    id: 5,
-    column: [{ id: 0, date: new Date(2020, 11, 1) }],
-    company: "Fake",
-    job: "Fake",
-    site: "https://www.google.com",
-  },
-];
-
 export default function ApplicationsPage(props) {
-  const [applications, setApplications] = useState(jobApps);
   // eslint-disable-next-line no-unused-vars
   const [columns, setColumns] = useState([
     { id: 0, name: "Applied" },
@@ -72,8 +23,6 @@ export default function ApplicationsPage(props) {
       name={col.name}
       key={col.id}
       id={col.id}
-      applications={applications}
-      setApplications={setApplications}
     />
   ));
   return (
@@ -81,8 +30,6 @@ export default function ApplicationsPage(props) {
       <div className="columns">{columnComponents}</div>
       <Route path="/application/:appId">
         <LargeCard
-          applications={applications}
-          setApplications={setApplications}
           columns={columns}
         />
       </Route>

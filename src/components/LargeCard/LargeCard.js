@@ -1,45 +1,43 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext } from "react";
+import { useParams, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/pro-light-svg-icons";
 import Options from "../Options/Options";
 import History from "../History/History";
+import ApplicationsContext from "../../contexts/ApplicationsContext/ApplicationsContext";
 import "./LargeCard.css";
 
 export default function LargeCard(props) {
+  const context = useContext(ApplicationsContext);
+  const { applications } = context;
   const { appId } = useParams();
-  const { applications, columns, setApplications } = props;
-
-  function handleOptionChange(e, application) {
-    const { value } = e.target;
-    const colItem = {
-      id: parseInt(value),
-      date: new Date(),
-    };
-    application.column.push(colItem);
-    setApplications([...applications]);
-  }
+  const { columns } = props;
 
   let application;
   application = applications.find((app) => app.id === parseInt(appId));
-  const { column } = application;
+  const { column, job, company, site } = application;
   const colLength = column.length;
   return (
     !!application && (
       <div className="LargeCard">
         <div className="container">
-          <h2>
-            <a href={application.site} rel="noreferrer" target="_blank">
-              {application.company}
-            </a>
-          </h2>
-          <div className="job">{application.job}</div>
+          <Link to="/" className="close">
+            <FontAwesomeIcon icon={faTimes} />
+          </Link>
+          <header>
+            <h2>
+              <a href={site} rel="noreferrer" target="_blank">
+                {company}
+              </a>
+            </h2>
+            <div className="job">{job}</div>
+          </header>
           <div className="content">
             <Options
-              application={application}
               options={columns}
               selected={column[colLength - 1].id}
-              optionChange={handleOptionChange}
             />
-            <History column={application.column} columns={columns} />
+            <History column={column} columns={columns} />
           </div>
         </div>
       </div>

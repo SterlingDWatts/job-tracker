@@ -4,4 +4,10 @@
   justify-content: flex-start;
   padding: 16px;
   overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.ApplicationsPage .columns::-webkit-scrollbar {
+  display: none;
 }

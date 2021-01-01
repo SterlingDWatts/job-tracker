@@ -16,6 +16,7 @@
   background-color: white;
   padding: 16px;
   width: 300px;
+  position: relative;
 }
 
 .LargeCard h2 a {
@@ -26,4 +27,22 @@
 
 .LargeCard .job {
   font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.LargeCard header {
+  margin-bottom: 32px;
+}
+
+.LargeCard .close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
