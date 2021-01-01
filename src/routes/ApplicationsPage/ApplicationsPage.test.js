@@ -18,11 +18,7 @@ describe("ApplicationsPage Component", () => {
   });
 
   it("renders the UI as expected", () => {
-    const wrapper = shallow(
-      <BrowserRouter>
-        <ApplicationsPage />
-      </BrowserRouter>
-    );
+    const wrapper = shallow(<ApplicationsPage />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
