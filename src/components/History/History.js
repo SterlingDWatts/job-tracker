@@ -10,7 +10,7 @@ export default function History(props) {
     return (
       <li key={idx}>
         <div className="name">{colName}</div>
-        <div className="date">{format(col.date, "MMM dd")}</div> 
+        <div className="date">{format(col.date, "MMM dd")}</div>
       </li>
     );
   });

@@ -11,12 +11,12 @@ export default function Options(props) {
 
   function handleChange(appId, e) {
     const { value } = e.target;
-    addStatus(appId, value)
+    addStatus(appId, value);
   }
 
   const optionsComponents = options.map((option, idx) => {
     return (
-      <option value={option.id} key={idx}> 
+      <option value={option.id} key={idx}>
         {option.name}
       </option>
     );

@@ -23,7 +23,7 @@ export default function LargeCard(props) {
         <div className="container">
           <Link to="/" className="close">
             <FontAwesomeIcon icon={faTimes} />
-          </Link> 
+          </Link>
           <header>
             <h2>
               <a href={site} rel="noreferrer" target="_blank">
@@ -33,10 +33,7 @@ export default function LargeCard(props) {
             <div className="job">{job}</div>
           </header>
           <div className="content">
-            <Options
-              options={columns}
-              selected={column[colLength - 1].id}
-            />
+            <Options options={columns} selected={column[colLength - 1].id} />
             <History column={column} columns={columns} />
           </div>
         </div>

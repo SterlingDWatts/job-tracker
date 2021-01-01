@@ -74,12 +74,12 @@ export class ApplicationsProvider extends Component {
 
   setApplications = (applications) => {
     this.setState({ applications });
-  }
+  };
 
   addStatus = (appId, statusId) => {
     const { applications } = this.state;
     statusId = parseInt(statusId);
-    appId = parseInt(appId)
+    appId = parseInt(appId);
     const status = {
       id: statusId,
       date: new Date(),
@@ -87,9 +87,9 @@ export class ApplicationsProvider extends Component {
     const column = applications.find((app) => app.id === appId).column;
     column.push(status);
     this.setState({
-      applications: [...this.state.applications] 
+      applications: [...this.state.applications],
     });
-  }
+  };
 
   render() {
     const value = {

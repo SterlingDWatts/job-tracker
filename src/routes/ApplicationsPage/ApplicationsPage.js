@@ -19,19 +19,13 @@ export default function ApplicationsPage(props) {
     { id: 9, name: "Offer Letter Date" },
   ]);
   const columnComponents = columns.map((col) => (
-    <Column
-      name={col.name}
-      key={col.id}
-      id={col.id}
-    />
+    <Column name={col.name} key={col.id} id={col.id} />
   ));
   return (
     <div className="ApplicationsPage">
       <div className="columns">{columnComponents}</div>
       <Route path="/application/:appId">
-        <LargeCard
-          columns={columns} 
-        />
+        <LargeCard columns={columns} />
       </Route>
     </div>
   );
