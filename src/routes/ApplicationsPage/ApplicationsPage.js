@@ -30,7 +30,7 @@ export default function ApplicationsPage(props) {
       <div className="columns">{columnComponents}</div>
       <Route path="/application/:appId">
         <LargeCard
-          columns={columns}
+          columns={columns} 
         />
       </Route>
     </div>

@@ -13,7 +13,7 @@ export default function Card(props) {
       <div>
         <div className="company">{company}</div>
         <div className="job">{job}</div>
-        <div className="date">{date}</div>
+        <div className="date">{date}</div> 
       </div>
     </Link>
   );

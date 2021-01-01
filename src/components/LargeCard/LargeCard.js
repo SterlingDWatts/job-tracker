@@ -23,7 +23,7 @@ export default function LargeCard(props) {
         <div className="container">
           <Link to="/" className="close">
             <FontAwesomeIcon icon={faTimes} />
-          </Link>
+          </Link> 
           <header>
             <h2>
               <a href={site} rel="noreferrer" target="_blank">

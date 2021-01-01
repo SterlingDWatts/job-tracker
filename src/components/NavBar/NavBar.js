@@ -6,5 +6,5 @@ export default function NavBar(props) {
     <div className="NavBar">
       <div className="container">Job Tracker</div>
     </div>
-  );
+  ); 
 }

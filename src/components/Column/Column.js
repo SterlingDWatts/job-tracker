@@ -21,7 +21,7 @@ export default function Column(props) {
   return (
     <div className="Column">
       <h2>{name}</h2>
-      <div className="card-container">{applications}</div>
+      <div className="card-container">{applications}</div> 
     </div>
   );
 }

@@ -19,6 +19,6 @@ describe("App Component", () => {
 
   it("renders the UI as expected", () => {
     const wrapper = shallow(<App />);
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(toJson(wrapper)).toMatchSnapshot(); 
   });
 });

@@ -87,7 +87,7 @@ export class ApplicationsProvider extends Component {
     const column = applications.find((app) => app.id === appId).column;
     column.push(status);
     this.setState({
-      applications: [...this.state.applications]
+      applications: [...this.state.applications] 
     });
   }
 

@@ -16,7 +16,7 @@ export default function Options(props) {
 
   const optionsComponents = options.map((option, idx) => {
     return (
-      <option value={option.id} key={idx}>
+      <option value={option.id} key={idx}> 
         {option.name}
       </option>
     );
