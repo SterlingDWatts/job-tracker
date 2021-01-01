@@ -6,16 +6,6 @@
   min-width: 200px;
 }
 
-.Column h2 {
-  font-size: 12px;
-  font-weight: 400;
-  padding: 10px 0 5px;
-  margin: 0;
-  text-transform: uppercase;
-  color: #5e6c84;
-  text-align: center;
-}
-
 .Column .card-container {
   padding: 1px 3px 0px;
 }

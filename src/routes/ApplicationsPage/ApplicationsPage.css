@@ -1,13 +1,37 @@
-.ApplicationsPage .columns {
+.ApplicationsPage {
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.ApplicationsPage::-webkit-scrollbar {
+  display: none;
+}
+
+.ApplicationsPage .columns,
+.ApplicationsPage .column-headers {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 16px;
-  overflow-x: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  padding: 0 16px 16px;
 }
 
-.ApplicationsPage .columns::-webkit-scrollbar {
-  display: none;
+.ApplicationsPage .column-headers {
+  padding: 16px 16px 0;
+}
+
+.ApplicationsPage .column-headers div {
+  background-color: #f4f5f7;
+  min-width: 200px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 0 5px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #5e6c84;
+  text-align: center;
+}
+
+.ApplicationsPage .column-headers div + div {
+  margin-left: 10px;
 }

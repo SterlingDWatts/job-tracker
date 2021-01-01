@@ -5,57 +5,110 @@ exports[`ApplicationsPage Component renders the UI as expected 1`] = `
   className="ApplicationsPage"
 >
   <div
+    className="top"
+  >
+    <Link
+      to="/add-application"
+    >
+      Add
+    </Link>
+  </div>
+  <div
+    className="column-headers"
+  >
+    <div
+      key="0"
+    >
+      Applied
+    </div>
+    <div
+      key="1"
+    >
+      Intro Interview
+    </div>
+    <div
+      key="2"
+    >
+      Recruiter Call
+    </div>
+    <div
+      key="3"
+    >
+      Sent Follow-up
+    </div>
+    <div
+      key="4"
+    >
+      Coding Challenge
+    </div>
+    <div
+      key="5"
+    >
+      Sent Follow-up
+    </div>
+    <div
+      key="6"
+    >
+      Technical Interview
+    </div>
+    <div
+      key="7"
+    >
+      Sent Follow-up
+    </div>
+    <div
+      key="8"
+    >
+      Onsite Interview
+    </div>
+    <div
+      key="9"
+    >
+      Offer Letter Date
+    </div>
+  </div>
+  <div
     className="columns"
   >
     <Column
       id={0}
       key="0"
-      name="Applied"
     />
     <Column
       id={1}
       key="1"
-      name="Intro Interview"
     />
     <Column
       id={2}
       key="2"
-      name="Recruiter Call"
     />
     <Column
       id={3}
       key="3"
-      name="Sent Follow-up"
     />
     <Column
       id={4}
       key="4"
-      name="Coding Challenge"
     />
     <Column
       id={5}
       key="5"
-      name="Sent Follow-up"
     />
     <Column
       id={6}
       key="6"
-      name="Technical Interview"
     />
     <Column
       id={7}
       key="7"
-      name="Sent Follow-up"
     />
     <Column
       id={8}
       key="8"
-      name="Onsite Interview"
     />
     <Column
       id={9}
       key="9"
-      name="Offer Letter Date"
     />
   </div>
   <Route
@@ -107,6 +160,11 @@ exports[`ApplicationsPage Component renders the UI as expected 1`] = `
         ]
       }
     />
+  </Route>
+  <Route
+    path="/add-application"
+  >
+    <AddApplication />
   </Route>
 </div>
 `;

@@ -4,7 +4,7 @@ import ApplicationsContext from "../../contexts/ApplicationsContext/Applications
 import "./Column.css";
 
 export default function Column(props) {
-  const { id, name } = props;
+  const { id } = props;
   const context = useContext(ApplicationsContext);
   let { applications } = context;
   if (applications) {
@@ -20,7 +20,6 @@ export default function Column(props) {
   }
   return (
     <div className="Column">
-      <h2>{name}</h2>
       <div className="card-container">{applications}</div>
     </div>
   );

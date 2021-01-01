@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/pro-light-svg-icons";
 import Options from "../Options/Options";
 import History from "../History/History";
+import { Overlay } from "../Utils/Utils";
 import ApplicationsContext from "../../contexts/ApplicationsContext/ApplicationsContext";
 import "./LargeCard.css";
 
@@ -19,25 +20,23 @@ export default function LargeCard(props) {
   const colLength = column.length;
   return (
     !!application && (
-      <div className="LargeCard">
-        <div className="container">
-          <Link to="/" className="close">
-            <FontAwesomeIcon icon={faTimes} />
-          </Link>
-          <header>
-            <h2>
-              <a href={site} rel="noreferrer" target="_blank">
-                {company}
-              </a>
-            </h2>
-            <div className="job">{job}</div>
-          </header>
-          <div className="content">
-            <Options options={columns} selected={column[colLength - 1].id} />
-            <History column={column} columns={columns} />
-          </div>
+      <Overlay className="LargeCard">
+        <Link to="/" className="close">
+          <FontAwesomeIcon icon={faTimes} />
+        </Link>
+        <header>
+          <h2>
+            <a href={site} rel="noreferrer" target="_blank">
+              {company}
+            </a>
+          </h2>
+          <div className="job">{job}</div>
+        </header>
+        <div className="content">
+          <Options options={columns} selected={column[colLength - 1].id} />
+          <History column={column} columns={columns} />
         </div>
-      </div>
+      </Overlay>
     )
   );
 }

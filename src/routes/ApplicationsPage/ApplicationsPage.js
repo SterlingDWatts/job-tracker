@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Column from "../../components/Column/Column";
 import LargeCard from "../../components/LargeCard/LargeCard";
+import AddApplication from "../../components/AddApplication/AddApplication";
 import "./ApplicationsPage.css";
 
 export default function ApplicationsPage(props) {
@@ -18,14 +19,24 @@ export default function ApplicationsPage(props) {
     { id: 8, name: "Onsite Interview" },
     { id: 9, name: "Offer Letter Date" },
   ]);
+  const columnHeaders = columns.map((col, idx) => (
+    <div key={idx}>{col.name}</div>
+  ));
   const columnComponents = columns.map((col) => (
-    <Column name={col.name} key={col.id} id={col.id} />
+    <Column key={col.id} id={col.id} />
   ));
   return (
     <div className="ApplicationsPage">
+      <div className="top">
+        <Link to="/add-application">Add</Link>
+      </div>
+      <div className="column-headers">{columnHeaders}</div>
       <div className="columns">{columnComponents}</div>
       <Route path="/application/:appId">
         <LargeCard columns={columns} />
+      </Route>
+      <Route path="/add-application">
+        <AddApplication />
       </Route>
     </div>
   );
