@@ -54,6 +54,7 @@ const jobApps = [
 
 export default function ApplicationsPage(props) {
   const [applications, setApplications] = useState(jobApps);
+  // eslint-disable-next-line no-unused-vars
   const [columns, setColumns] = useState([
     { id: 0, name: "Applied" },
     { id: 1, name: "Intro Interview" },
