@@ -1,0 +1,8 @@
+.History {
+  padding-top: 16px;
+}
+.History li {
+  display: grid;
+  grid-template-columns: 120px auto;
+  font-size: 14px;
+}
