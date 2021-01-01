@@ -17,10 +17,15 @@
   position: relative;
 }
 
+.Overlay .icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
 .Overlay .close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
   border: none;
   background-color: rgba(0, 0, 0, 0);
   color: black;

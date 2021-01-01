@@ -1,21 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/pro-light-svg-icons";
+import { faArrowLeft, faEllipsisV } from "@fortawesome/pro-light-svg-icons";
 import "./Utils.css";
 
 export function Overlay(props) {
   return (
     <div className={`Overlay ${props.className}`}>
       <div className="container">
-        <Link to="/" className="close">
-          <FontAwesomeIcon icon={faTimes} />
-        </Link>
+        <div className="icons">
+          <Link to="/" className="close">
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </Link>
+          {props.ellipsis && (
+            <FontAwesomeIcon
+              icon={faEllipsisV}
+              onClick={(e) => props.ellipsisClick(e)}
+            />
+          )}
+        </div>
         {props.children}
       </div>
     </div>
   );
 }
+
+Overlay.defaultProps = {
+  ellipsesClick: () => {},
+};
 
 export function LabelGroup(props) {
   return (
