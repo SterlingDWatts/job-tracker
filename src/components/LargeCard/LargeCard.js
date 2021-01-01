@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import { useParams, Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/pro-light-svg-icons";
+import { useParams, useHistory } from "react-router-dom";
 import Options from "../Options/Options";
 import History from "../History/History";
 import { Overlay } from "../Utils/Utils";
@@ -10,20 +8,18 @@ import "./LargeCard.css";
 
 export default function LargeCard(props) {
   const context = useContext(ApplicationsContext);
+  const history = useHistory();
   const { applications } = context;
   const { appId } = useParams();
   const { columns } = props;
 
   let application;
-  application = applications.find((app) => app.id === parseInt(appId));
-  const { column, job, company, site } = application;
-  const colLength = column.length;
-  return (
-    !!application && (
+  application = applications.find((app) => app.id === appId);
+  if (!!application) {
+    const { column, job, company, site } = application;
+    const colLength = column.length;
+    return (
       <Overlay className="LargeCard">
-        <Link to="/" className="close">
-          <FontAwesomeIcon icon={faTimes} />
-        </Link>
         <header>
           <h2>
             <a href={site} rel="noreferrer" target="_blank">
@@ -37,6 +33,9 @@ export default function LargeCard(props) {
           <History column={column} columns={columns} />
         </div>
       </Overlay>
-    )
-  );
+    );
+  } else {
+    history.push("/");
+    return null;
+  }
 }

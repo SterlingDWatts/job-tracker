@@ -1,4 +1,5 @@
 import React, { createContext, Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const ApplicationsContext = createContext({
   applications: [],
@@ -16,45 +17,45 @@ export class ApplicationsProvider extends Component {
     error: null,
     applications: [
       {
-        id: 0,
+        id: uuidv4(),
         column: [{ id: 0, date: new Date(2020, 4, 13) }],
         company: "Ultimate Software",
         job: "Sotware Engineer 2",
         site: "https://www.ultimatesoftware.com/",
       },
       {
-        id: 1,
+        id: uuidv4(),
         column: [
           { id: 0, date: new Date(2020, 4, 14) },
-          { id: 3, date: new Date(2020, 4, 14) },
+          { id: 4, date: new Date(2020, 4, 14) },
         ],
         company: "Art & Logic",
         job: "Full Stack Web Developer",
         site: "https://artandlogic.com/",
       },
       {
-        id: 2,
+        id: uuidv4(),
         column: [{ id: 0, date: new Date(2020, 4, 14) }],
         company: "GitStart",
         job: "Full Stack JavaScript Developer - Junior",
         site: "https://www.gitstart.com/",
       },
       {
-        id: 3,
+        id: uuidv4(),
         column: [{ id: 0, date: new Date(2020, 4, 14) }],
         company: "CyberCoders",
         job: "Web Developer",
         site: "https://www.cybercoders.com/",
       },
       {
-        id: 4,
+        id: uuidv4(),
         column: [{ id: 0, date: new Date(2020, 4, 14) }],
         company: "Digital Media Solutions",
         job: "Frontend Developer",
         site: "https://digitalmediasolutions.com/",
       },
       {
-        id: 5,
+        id: uuidv4(),
         column: [{ id: 0, date: new Date(2020, 11, 1) }],
         company: "Fake",
         job: "Fake",
@@ -79,7 +80,6 @@ export class ApplicationsProvider extends Component {
   addStatus = (appId, statusId) => {
     const { applications } = this.state;
     statusId = parseInt(statusId);
-    appId = parseInt(appId);
     const status = {
       id: statusId,
       date: new Date(),

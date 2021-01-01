@@ -16,3 +16,57 @@
   padding: 16px;
   position: relative;
 }
+
+.Overlay .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  line-height: 16px;
+}
+
+.LabelGroup {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 0px auto 32px;
+}
+
+.Label {
+  position: relative;
+  width: max-content;
+  top: 12px;
+  left: 12px;
+  background-color: white;
+  padding: 0px 4px;
+  color: grey;
+  font-size: 13px;
+  z-index: 0;
+}
+
+.Input {
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 5px;
+  padding: 16px 13px;
+  font-size: 16px;
+  width: 288px;
+}
+
+.Input:focus,
+input.Input:active {
+  border: 2px solid grey;
+  padding: 15px 12px;
+  outline: none;
+}
+
+.Input--error:focus,
+input.Input--error:active,
+input.Input--error {
+  border: 2px solid rgb(253, 151, 38);
+  padding: 15px 12px;
+}
