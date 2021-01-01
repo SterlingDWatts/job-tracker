@@ -1,0 +1,12 @@
+a.Card {
+  text-decoration: none;
+  color: black;
+  height: fit-content;
+}
+
+.Card div {
+  background-color: white;
+  padding: 5px;
+  margin: 5px 0px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px 0px;
+}

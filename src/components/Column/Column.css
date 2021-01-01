@@ -1,0 +1,24 @@
+.Column {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #f4f5f7;
+  color: rgb(23, 43, 77);
+  min-width: 240px;
+}
+
+.Column h2 {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #5e6c84;
+}
+
+.Column .card-container {
+  padding: 1px 3px 0px;
+}
+
+.Column + .Column {
+  margin-left: 10px;
+}

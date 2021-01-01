@@ -1,0 +1,7 @@
+.ApplicationsPage .columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 16px;
+  overflow-x: scroll;
+}
