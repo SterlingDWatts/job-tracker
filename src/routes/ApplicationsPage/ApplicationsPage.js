@@ -28,7 +28,9 @@ export default function ApplicationsPage(props) {
   return (
     <div className="ApplicationsPage">
       <div className="top">
-        <Link to="/add-application">Add</Link>
+        <Link to="/add-application" className="add-app">
+          Add
+        </Link>
       </div>
       <div className="column-headers">{columnHeaders}</div>
       <div className="columns">{columnComponents}</div>

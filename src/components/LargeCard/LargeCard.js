@@ -19,6 +19,12 @@ export default function LargeCard(props) {
     setShowMenu(true);
   }
 
+  function handleDeleteApplication() {
+    const { deleteApplication } = context;
+    history.push("/");
+    deleteApplication(appId);
+  }
+
   let application;
   application = applications.find((app) => app.id === appId);
   if (!!application) {
@@ -30,7 +36,13 @@ export default function LargeCard(props) {
         ellipsis={true}
         ellipsisClick={handleEllipsisClick}
       >
-        {showMenu && <div className="ellipsis-menu">Delete</div>}
+        {showMenu && (
+          <div className="ellipsis-menu">
+            <button type="button" onClick={handleDeleteApplication}>
+              Delete
+            </button>
+          </div>
+        )}
         <header onClick={(e) => setShowMenu(false)}>
           <h2>
             <a href={site} rel="noreferrer" target="_blank">

@@ -8,6 +8,7 @@ const ApplicationsContext = createContext({
   clearError: () => {},
   setApplications: () => {},
   addStatus: () => {},
+  deleteApplication: () => {},
 });
 
 export default ApplicationsContext;
@@ -91,6 +92,17 @@ export class ApplicationsProvider extends Component {
     });
   };
 
+  getApplicationIdx = (id) => {
+    const { applications } = this.state;
+    return applications.findIndex((app) => app.id === id);
+  };
+
+  deleteApplication = (id) => {
+    let { applications } = this.state;
+    applications = applications.filter((app) => app.id !== id);
+    this.setState({ applications: [...applications] });
+  };
+
   render() {
     const value = {
       applications: this.state.applications,
@@ -99,6 +111,7 @@ export class ApplicationsProvider extends Component {
       clearError: this.clearError,
       setApplications: this.setApplications,
       addStatus: this.addStatus,
+      deleteApplication: this.deleteApplication,
     };
     return (
       <ApplicationsContext.Provider value={value}>
