@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options Component renders the UI as expected 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "canGo": [Function],
+      "createHref": [Function],
+      "entries": Array [
+        Object {
+          "hash": "",
+          "key": "1",
+          "pathname": "/applications/4",
+          "search": "",
+        },
+      ],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "index": 0,
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "1",
+        "pathname": "/applications/4",
+        "search": "",
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Options
+    options={
+      Array [
+        Array [
+          Object {
+            "id": 0,
+            "name": "Applied",
+          },
+          Object {
+            "id": 1,
+            "name": "Intro Interview",
+          },
+          Object {
+            "id": 2,
+            "name": "Recruiter Call",
+          },
+          Object {
+            "id": 3,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 4,
+            "name": "Coding Challenge",
+          },
+          Object {
+            "id": 5,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 6,
+            "name": "Technical Interview",
+          },
+          Object {
+            "id": 7,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 8,
+            "name": "Onsite Interview",
+          },
+          Object {
+            "id": 9,
+            "name": "Offer Letter Date",
+          },
+        ],
+      ]
+    }
+    selected={4}
+  />
+</Router>
+`;

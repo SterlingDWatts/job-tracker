@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component renders the UI as expected 1`] = `
+<Link
+  className="Card"
+  to="/application/1"
+>
+  <div>
+    <div
+      className="company"
+    >
+      Ultimate Software
+    </div>
+    <div
+      className="job"
+    >
+      Sotware Engineer 2
+    </div>
+    <div
+      className="date"
+    >
+      May 13, 2020
+    </div>
+  </div>
+</Link>
+`;

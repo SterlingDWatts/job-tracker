@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddApplication Component renders the UI as expected 1`] = `
+<Overlay
+  className="AddApplication"
+  ellipsesClick={[Function]}
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <LabelGroup>
+      <Label
+        htmlFor="company"
+      >
+        Company
+      </Label>
+      <Input
+        id="company"
+        name="company"
+        onChange={[Function]}
+        placeholder="ex: Mindera"
+        type="text"
+        value=""
+      />
+    </LabelGroup>
+    <LabelGroup>
+      <Label
+        htmlFor="companySite"
+      >
+        Company Site
+      </Label>
+      <Input
+        id="companySite"
+        name="companySite"
+        onChange={[Function]}
+        type="url"
+        value=""
+      />
+    </LabelGroup>
+    <LabelGroup>
+      <Label
+        htmlFor="jobTitle"
+      >
+        Job Title
+      </Label>
+      <Input
+        id="jobTitle"
+        name="jobTitle"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </LabelGroup>
+    <button
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</Overlay>
+`;
