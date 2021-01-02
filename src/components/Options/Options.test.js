@@ -35,9 +35,7 @@ describe("Options Component", () => {
 
   it("renders the UI as expected", () => {
     const wrapper = shallow(
-      <MemoryRouter
-        initialEntries={[{ pathname: "/applications/4", key: "1" }]}
-      >
+      <MemoryRouter initialEntries={[{ pathname: "/applications/4", key: "1" }]}>
         <Options options={columns} selected={4} />
       </MemoryRouter>
     );

@@ -13,11 +13,7 @@ export function Overlay(props) {
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           {props.ellipsis && (
-            <button
-              type="button"
-              className="ellipsis-button"
-              onClick={(e) => props.ellipsisClick(e)}
-            >
+            <button type="button" className="ellipsis-button" onClick={(e) => props.ellipsisClick(e)}>
               <FontAwesomeIcon icon={faEllipsisV} />
             </button>
           )}
@@ -33,15 +29,11 @@ Overlay.defaultProps = {
 };
 
 export function LabelGroup(props) {
-  return (
-    <div className={`LabelGroup ${props.className}`}>{props.children}</div>
-  );
+  return <div className={`LabelGroup ${props.className}`}>{props.children}</div>;
 }
 
 export function Input({ error, className, ...props }) {
-  const classNames = !!error
-    ? ["Input", "Input--error", className]
-    : ["Input", className];
+  const classNames = !!error ? ["Input", "Input--error", className] : ["Input", className];
   return <input className={classNames.join(" ")} {...props} />;
 }
 
