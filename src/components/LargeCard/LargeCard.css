@@ -25,8 +25,19 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  padding: 16px;
+  padding: 16px 32px 16px 16px;
   background-color: white;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px 0px;
   border-radius: 4px;
+}
+
+.LargeCard .ellipsis-menu button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.LargeCard .ellipsis-menu button:hover {
+  cursor: pointer;
 }

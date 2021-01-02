@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "prebuild": "react-scripts test --colors",
+    "prebuild": "set CI=true&&react-scripts test --colors",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

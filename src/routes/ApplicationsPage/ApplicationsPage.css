@@ -35,3 +35,23 @@
 .ApplicationsPage .column-headers div + div {
   margin-left: 10px;
 }
+
+.ApplicationsPage .top {
+  padding: 8px 16px 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.ApplicationsPage .add-app {
+  margin: 0;
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+  background-color: #21b0bf;
+  border-radius: 4px;
+  width: 150px;
+  display: block;
+  text-align: center;
+}
