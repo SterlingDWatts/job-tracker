@@ -8,6 +8,7 @@ exports[`ApplicationsPage Component renders the UI as expected 1`] = `
     className="top"
   >
     <Link
+      className="add-app"
       to="/add-application"
     >
       Add

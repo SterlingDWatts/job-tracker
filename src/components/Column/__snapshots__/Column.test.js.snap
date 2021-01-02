@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column Comopnent renders the UI as expected 1`] = `
+<div
+  className="Column"
+>
+  <div
+    className="card-container"
+  />
+</div>
+`;

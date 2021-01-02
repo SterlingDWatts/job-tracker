@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History Component renders the UI as expected 1`] = `
+<div
+  className="History"
+>
+  <ul>
+    <li
+      key="0"
+    >
+      <div
+        className="name"
+      >
+        Applied
+      </div>
+      <div
+        className="date"
+      >
+        May 14
+      </div>
+    </li>
+    <li
+      key="1"
+    >
+      <div
+        className="name"
+      >
+        Coding Challenge
+      </div>
+      <div
+        className="date"
+      >
+        May 14
+      </div>
+    </li>
+  </ul>
+</div>
+`;
