@@ -10,7 +10,7 @@ export default function LargeCard(props) {
   const context = useContext(ApplicationsContext);
   const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
-  const { applications } = context;
+  const { applications, removeApplication } = context;
   const { appId } = useParams();
   const { columns } = props;
 
@@ -30,7 +30,13 @@ export default function LargeCard(props) {
         ellipsis={true}
         ellipsisClick={handleEllipsisClick}
       >
-        {showMenu && <div className="ellipsis-menu">Delete</div>}
+        {showMenu && (
+          <div className="ellipsis-menu">
+            <div className="delete" onClick={(e) => removeApplication(appId)}>
+              Delete
+            </div>
+          </div>
+        )}
         <header onClick={(e) => setShowMenu(false)}>
           <h2>
             <a href={site} rel="noreferrer" target="_blank">

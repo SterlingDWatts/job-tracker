@@ -35,6 +35,10 @@
   line-height: 16px;
 }
 
+.Overlay .ellipsis-container {
+  cursor: pointer;
+}
+
 .LabelGroup {
   display: flex;
   flex-direction: column;

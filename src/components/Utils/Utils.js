@@ -13,10 +13,12 @@ export function Overlay(props) {
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
           {props.ellipsis && (
-            <FontAwesomeIcon
-              icon={faEllipsisV}
+            <div
+              className="ellipsis-container"
               onClick={(e) => props.ellipsisClick(e)}
-            />
+            >
+              <FontAwesomeIcon icon={faEllipsisV} />
+            </div>
           )}
         </div>
         {props.children}
