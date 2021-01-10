@@ -29,6 +29,8 @@
   background-color: white;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 2px 0px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .LargeCard .ellipsis-menu button {
@@ -36,6 +38,11 @@
   border: 0;
   outline: 0;
   background-color: rgba(0, 0, 0, 0);
+  text-align: left;
+}
+
+.LargeCard .ellipsis-menu button + button {
+  margin-top: 8px;
 }
 
 .LargeCard .ellipsis-menu button:hover {

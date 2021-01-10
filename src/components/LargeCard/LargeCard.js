@@ -24,6 +24,10 @@ export default function LargeCard(props) {
     removeApplication(appId);
   }
 
+  function handleEditClick() {
+    history.push(`/edit-application/${appId}`);
+  }
+
   let application;
   application = applications.find((app) => app.id === appId);
   if (!!application) {
@@ -37,6 +41,9 @@ export default function LargeCard(props) {
       >
         {showMenu && (
           <div className="ellipsis-menu">
+            <button type="button" onClick={handleEditClick}>
+              Edit
+            </button>
             <button type="button" onClick={handleDeleteApplication}>
               Delete
             </button>

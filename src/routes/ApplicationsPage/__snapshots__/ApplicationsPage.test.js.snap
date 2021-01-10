@@ -167,5 +167,55 @@ exports[`ApplicationsPage Component renders the UI as expected 1`] = `
   >
     <AddApplication />
   </Route>
+  <Route
+    path="/edit-application/:appId"
+  >
+    <LargeCardEdit
+      columns={
+        Array [
+          Object {
+            "id": 0,
+            "name": "Applied",
+          },
+          Object {
+            "id": 1,
+            "name": "Intro Interview",
+          },
+          Object {
+            "id": 2,
+            "name": "Recruiter Call",
+          },
+          Object {
+            "id": 3,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 4,
+            "name": "Coding Challenge",
+          },
+          Object {
+            "id": 5,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 6,
+            "name": "Technical Interview",
+          },
+          Object {
+            "id": 7,
+            "name": "Sent Follow-up",
+          },
+          Object {
+            "id": 8,
+            "name": "Onsite Interview",
+          },
+          Object {
+            "id": 9,
+            "name": "Offer Letter Date",
+          },
+        ]
+      }
+    />
+  </Route>
 </div>
 `;
