@@ -7,6 +7,7 @@ const ApplicationsContext = createContext({
   setError: () => {},
   clearError: () => {},
   setApplications: () => {},
+  removeApplication: () => {},
   addStatus: () => {},
 });
 
@@ -77,6 +78,12 @@ export class ApplicationsProvider extends Component {
     this.setState({ applications });
   };
 
+  removeApplication = (id) => {
+    let { applications } = this.state;
+    applications = applications.filter((app) => app.id !== id);
+    this.setApplications(applications);
+  };
+
   addStatus = (appId, statusId) => {
     const { applications } = this.state;
     statusId = parseInt(statusId);
@@ -91,6 +98,11 @@ export class ApplicationsProvider extends Component {
     });
   };
 
+  getApplicationIdx = (id) => {
+    const { applications } = this.state;
+    return applications.findIndex((app) => app.id === id);
+  };
+
   render() {
     const value = {
       applications: this.state.applications,
@@ -98,6 +110,7 @@ export class ApplicationsProvider extends Component {
       setError: this.setError,
       clearError: this.clearError,
       setApplications: this.setApplications,
+      removeApplication: this.removeApplication,
       addStatus: this.addStatus,
     };
     return (
