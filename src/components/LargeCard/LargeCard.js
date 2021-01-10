@@ -19,6 +19,11 @@ export default function LargeCard(props) {
     setShowMenu(true);
   }
 
+  function handleDeleteApplication() {
+    history.push("/");
+    removeApplication(appId);
+  }
+
   let application;
   application = applications.find((app) => app.id === appId);
   if (!!application) {
@@ -32,9 +37,9 @@ export default function LargeCard(props) {
       >
         {showMenu && (
           <div className="ellipsis-menu">
-            <div className="delete" onClick={(e) => removeApplication(appId)}>
+            <button type="button" onClick={handleDeleteApplication}>
               Delete
-            </div>
+            </button>
           </div>
         )}
         <header onClick={(e) => setShowMenu(false)}>

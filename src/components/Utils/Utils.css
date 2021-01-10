@@ -15,6 +15,7 @@
   background-color: white;
   padding: 16px;
   position: relative;
+  border-radius: 6px;
 }
 
 .Overlay .icons {
@@ -35,7 +36,15 @@
   line-height: 16px;
 }
 
-.Overlay .ellipsis-container {
+.Overlay button.ellipsis-button {
+  border: none;
+  padding: none;
+  margin: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.ellipsis-button:hover {
   cursor: pointer;
 }
 

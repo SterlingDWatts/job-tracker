@@ -98,6 +98,11 @@ export class ApplicationsProvider extends Component {
     });
   };
 
+  getApplicationIdx = (id) => {
+    const { applications } = this.state;
+    return applications.findIndex((app) => app.id === id);
+  };
+
   render() {
     const value = {
       applications: this.state.applications,
