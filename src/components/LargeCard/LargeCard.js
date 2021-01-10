@@ -24,19 +24,22 @@ export default function LargeCard(props) {
     removeApplication(appId);
   }
 
+  function handleEditClick() {
+    history.push(`/edit-application/${appId}`);
+  }
+
   let application;
   application = applications.find((app) => app.id === appId);
   if (!!application) {
     const { column, job, company, site } = application;
     const colLength = column.length;
     return (
-      <Overlay
-        className="LargeCard"
-        ellipsis={true}
-        ellipsisClick={handleEllipsisClick}
-      >
+      <Overlay className="LargeCard" ellipsis={true} ellipsisClick={handleEllipsisClick}>
         {showMenu && (
           <div className="ellipsis-menu">
+            <button type="button" onClick={handleEditClick}>
+              Edit
+            </button>
             <button type="button" onClick={handleDeleteApplication}>
               Delete
             </button>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import Column from "../../components/Column/Column";
 import LargeCard from "../../components/LargeCard/LargeCard";
+import LargeCardEdit from "../../components/LargeCardEdit/LargeCardEdit";
 import AddApplication from "../../components/AddApplication/AddApplication";
 import "./ApplicationsPage.css";
 
@@ -19,12 +20,8 @@ export default function ApplicationsPage(props) {
     { id: 8, name: "Onsite Interview" },
     { id: 9, name: "Offer Letter Date" },
   ]);
-  const columnHeaders = columns.map((col, idx) => (
-    <div key={idx}>{col.name}</div>
-  ));
-  const columnComponents = columns.map((col) => (
-    <Column key={col.id} id={col.id} />
-  ));
+  const columnHeaders = columns.map((col, idx) => <div key={idx}>{col.name}</div>);
+  const columnComponents = columns.map((col) => <Column key={col.id} id={col.id} />);
   return (
     <div className="ApplicationsPage">
       <div className="top">
@@ -39,6 +36,9 @@ export default function ApplicationsPage(props) {
       </Route>
       <Route path="/add-application">
         <AddApplication />
+      </Route>
+      <Route path="/edit-application/:appId">
+        <LargeCardEdit columns={columns} />
       </Route>
     </div>
   );
