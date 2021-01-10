@@ -34,11 +34,7 @@ export default function LargeCard(props) {
     const { column, job, company, site } = application;
     const colLength = column.length;
     return (
-      <Overlay
-        className="LargeCard"
-        ellipsis={true}
-        ellipsisClick={handleEllipsisClick}
-      >
+      <Overlay className="LargeCard" ellipsis={true} ellipsisClick={handleEllipsisClick}>
         {showMenu && (
           <div className="ellipsis-menu">
             <button type="button" onClick={handleEditClick}>

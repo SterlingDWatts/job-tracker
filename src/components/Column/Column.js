@@ -8,15 +8,10 @@ export default function Column(props) {
   const context = useContext(ApplicationsContext);
   let { applications } = context;
   if (applications) {
-    applications = applications.filter(
-      (application) =>
-        application.column[application.column.length - 1].id === id
-    );
+    applications = applications.filter((application) => application.column[application.column.length - 1].id === id);
   }
   if (applications) {
-    applications = applications.map((application, idx) => (
-      <Card application={application} key={idx} />
-    ));
+    applications = applications.map((application, idx) => <Card application={application} key={idx} />);
   }
   return (
     <div className="Column">

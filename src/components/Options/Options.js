@@ -22,11 +22,7 @@ export default function Options(props) {
     );
   });
   return (
-    <select
-      className="Options"
-      value={selected}
-      onChange={(e) => handleChange(appId, e)}
-    >
+    <select className="Options" value={selected} onChange={(e) => handleChange(appId, e)}>
       {optionsComponents}
     </select>
   );

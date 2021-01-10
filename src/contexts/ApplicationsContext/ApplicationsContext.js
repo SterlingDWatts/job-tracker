@@ -113,10 +113,6 @@ export class ApplicationsProvider extends Component {
       removeApplication: this.removeApplication,
       addStatus: this.addStatus,
     };
-    return (
-      <ApplicationsContext.Provider value={value}>
-        {this.props.children}
-      </ApplicationsContext.Provider>
-    );
+    return <ApplicationsContext.Provider value={value}>{this.props.children}</ApplicationsContext.Provider>;
   }
 }
