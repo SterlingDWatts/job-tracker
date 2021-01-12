@@ -1,0 +1,22 @@
+.LargeCardEdit {
+  max-height: 100vh;
+}
+
+.LargeCardEdit .container {
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.LargeCardEdit form {
+  padding-top: 8px;
+}
+
+.LargeCardEdit .LabelGroup {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.LargeCardEdit .Label {
+  position: absolute;
+  top: -8px;
+}

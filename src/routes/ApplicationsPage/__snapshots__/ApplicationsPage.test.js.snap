@@ -2,220 +2,125 @@
 
 exports[`ApplicationsPage Component renders the UI as expected 1`] = `
 <div
-  className="ApplicationsPage"
+  class="ApplicationsPage"
 >
   <div
-    className="top"
+    class="top"
   >
-    <Link
-      className="add-app"
-      to="/add-application"
+    <a
+      class="add-app"
+      href="/?add=true"
     >
       Add
-    </Link>
+    </a>
   </div>
   <div
-    className="column-headers"
+    class="column-headers"
   >
-    <div
-      key="0"
-    >
+    <div>
       Applied
     </div>
-    <div
-      key="1"
-    >
+    <div>
       Intro Interview
     </div>
-    <div
-      key="2"
-    >
+    <div>
       Recruiter Call
     </div>
-    <div
-      key="3"
-    >
+    <div>
       Sent Follow-up
     </div>
-    <div
-      key="4"
-    >
+    <div>
       Coding Challenge
     </div>
-    <div
-      key="5"
-    >
+    <div>
       Sent Follow-up
     </div>
-    <div
-      key="6"
-    >
+    <div>
       Technical Interview
     </div>
-    <div
-      key="7"
-    >
+    <div>
       Sent Follow-up
     </div>
-    <div
-      key="8"
-    >
+    <div>
       Onsite Interview
     </div>
-    <div
-      key="9"
-    >
+    <div>
       Offer Letter Date
     </div>
   </div>
   <div
-    className="columns"
+    class="columns"
   >
-    <Column
-      id={0}
-      key="0"
-    />
-    <Column
-      id={1}
-      key="1"
-    />
-    <Column
-      id={2}
-      key="2"
-    />
-    <Column
-      id={3}
-      key="3"
-    />
-    <Column
-      id={4}
-      key="4"
-    />
-    <Column
-      id={5}
-      key="5"
-    />
-    <Column
-      id={6}
-      key="6"
-    />
-    <Column
-      id={7}
-      key="7"
-    />
-    <Column
-      id={8}
-      key="8"
-    />
-    <Column
-      id={9}
-      key="9"
-    />
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
+    <div
+      class="Column"
+    >
+      <div
+        class="card-container"
+      />
+    </div>
   </div>
-  <Route
-    path="/application/:appId"
-  >
-    <LargeCard
-      columns={
-        Array [
-          Object {
-            "id": 0,
-            "name": "Applied",
-          },
-          Object {
-            "id": 1,
-            "name": "Intro Interview",
-          },
-          Object {
-            "id": 2,
-            "name": "Recruiter Call",
-          },
-          Object {
-            "id": 3,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 4,
-            "name": "Coding Challenge",
-          },
-          Object {
-            "id": 5,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 6,
-            "name": "Technical Interview",
-          },
-          Object {
-            "id": 7,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 8,
-            "name": "Onsite Interview",
-          },
-          Object {
-            "id": 9,
-            "name": "Offer Letter Date",
-          },
-        ]
-      }
-    />
-  </Route>
-  <Route
-    path="/add-application"
-  >
-    <AddApplication />
-  </Route>
-  <Route
-    path="/edit-application/:appId"
-  >
-    <LargeCardEdit
-      columns={
-        Array [
-          Object {
-            "id": 0,
-            "name": "Applied",
-          },
-          Object {
-            "id": 1,
-            "name": "Intro Interview",
-          },
-          Object {
-            "id": 2,
-            "name": "Recruiter Call",
-          },
-          Object {
-            "id": 3,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 4,
-            "name": "Coding Challenge",
-          },
-          Object {
-            "id": 5,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 6,
-            "name": "Technical Interview",
-          },
-          Object {
-            "id": 7,
-            "name": "Sent Follow-up",
-          },
-          Object {
-            "id": 8,
-            "name": "Onsite Interview",
-          },
-          Object {
-            "id": 9,
-            "name": "Offer Letter Date",
-          },
-        ]
-      }
-    />
-  </Route>
 </div>
 `;

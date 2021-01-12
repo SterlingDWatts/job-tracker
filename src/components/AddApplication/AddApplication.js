@@ -33,8 +33,9 @@ export default function AddApplication(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const id = uuidv4();
     const app = {
-      id: uuidv4(),
+      id,
       column: [{ id: 0, date: new Date() }],
       company: form.company.value,
       job: form.jobTitle.value,
@@ -56,7 +57,7 @@ export default function AddApplication(props) {
         touched: false,
       },
     });
-    history.push("/");
+    history.push(`/?app=${id}`);
   }
 
   return (

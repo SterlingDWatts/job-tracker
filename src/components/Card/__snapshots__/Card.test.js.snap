@@ -3,7 +3,7 @@
 exports[`Card Component renders the UI as expected 1`] = `
 <Link
   className="Card"
-  to="/application/1"
+  to="/?app=1"
 >
   <div>
     <div

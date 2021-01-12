@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Route, Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
+import ApplicationsContext from "../../contexts/ApplicationsContext/ApplicationsContext";
 import Column from "../../components/Column/Column";
 import LargeCard from "../../components/LargeCard/LargeCard";
 import LargeCardEdit from "../../components/LargeCardEdit/LargeCardEdit";
@@ -7,6 +8,15 @@ import AddApplication from "../../components/AddApplication/AddApplication";
 import "./ApplicationsPage.css";
 
 export default function ApplicationsPage(props) {
+  const context = useContext(ApplicationsContext);
+  const { applications } = context;
+  let useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+  const query = useQuery();
+  const appQuery = query.get("app");
+  const editQuery = query.get("edit");
+  const addQuery = query.get("add");
   // eslint-disable-next-line no-unused-vars
   const [columns, setColumns] = useState([
     { id: 0, name: "Applied" },
@@ -25,21 +35,15 @@ export default function ApplicationsPage(props) {
   return (
     <div className="ApplicationsPage">
       <div className="top">
-        <Link to="/add-application" className="add-app">
+        <Link to="/?add=true" className="add-app">
           Add
         </Link>
       </div>
       <div className="column-headers">{columnHeaders}</div>
       <div className="columns">{columnComponents}</div>
-      <Route path="/application/:appId">
-        <LargeCard columns={columns} />
-      </Route>
-      <Route path="/add-application">
-        <AddApplication />
-      </Route>
-      <Route path="/edit-application/:appId">
-        <LargeCardEdit columns={columns} />
-      </Route>
+      {applications.find((app) => app.id === appQuery) && <LargeCard columns={columns} appId={appQuery} />}
+      {applications.find((app) => app.id === editQuery) && <LargeCardEdit columns={columns} appId={editQuery} />}
+      {addQuery === "true" && <AddApplication />}
     </div>
   );
 }
