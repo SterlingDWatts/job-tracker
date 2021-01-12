@@ -51,11 +51,11 @@ exports[`AddApplication Component renders the UI as expected 1`] = `
         value=""
       />
     </LabelGroup>
-    <button
+    <Button
       type="submit"
     >
       Save
-    </button>
+    </Button>
   </form>
 </Overlay>
 `;
