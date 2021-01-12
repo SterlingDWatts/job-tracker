@@ -7,9 +7,9 @@ export default function Card(props) {
   const { id, company, job, column } = props.application;
   const colLength = column.length;
   let date = column[colLength - 1].date;
-  date = format(date, "MMM d, yyyy");
+  date = format(date, "MMM dd, yyyy");
   return (
-    <Link className="Card" to={`/application/${id}`}>
+    <Link className="Card" to={`/?app=${id}`}>
       <div>
         <div className="company">{company}</div>
         <div className="job">{job}</div>

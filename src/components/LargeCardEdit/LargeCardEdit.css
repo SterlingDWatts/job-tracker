@@ -1,0 +1,9 @@
+.LargeCardEdit .LabelGroup {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.LargeCardEdit .Label {
+  position: absolute;
+  top: -8px;
+}
