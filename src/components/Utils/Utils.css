@@ -88,3 +88,17 @@ input.Input--error {
   border: 2px solid rgb(253, 151, 38);
   padding: 15px 12px;
 }
+
+.Button {
+  margin: 0;
+  padding: 8px;
+  color: white;
+  background-color: #21b0bf;
+  border-radius: 4px;
+  border: none;
+  width: 150px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}

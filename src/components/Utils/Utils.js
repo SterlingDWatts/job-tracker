@@ -40,3 +40,7 @@ export function Input({ error, className, ...props }) {
 export function Label({ className, ...props }) {
   return <label className={["Label", className].join(" ")} {...props} />;
 }
+
+export function Button({ className, ...props }) {
+  return <button className={["Button", className].join(" ")} {...props} />;
+}

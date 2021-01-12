@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import { Overlay, LabelGroup, Input, Label } from "../Utils/Utils";
+import { Overlay, LabelGroup, Input, Label, Button } from "../Utils/Utils";
 import ApplicationsContext from "../../contexts/ApplicationsContext/ApplicationsContext";
 import "./AddApplication.css";
 
@@ -94,7 +94,7 @@ export default function AddApplication(props) {
             onChange={(e) => handleChange(e)}
           />
         </LabelGroup>
-        <button type="submit">Save</button>
+        <Button type="submit">Save</Button>
       </form>
     </Overlay>
   );
