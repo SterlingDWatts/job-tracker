@@ -23,6 +23,11 @@ export default function EditStatus(props) {
     }
   }
 
+  function handleRemoveStatus(idx) {
+    column.splice(idx, 1);
+    setApplications([...applications]);
+  }
+
   return (
     <div className="EditStatus">
       {column.map((status, idx) => (
@@ -32,7 +37,9 @@ export default function EditStatus(props) {
           key={idx}
           idx={idx}
           columns={columns}
+          colLength={column.length}
           handleStatusChange={handleStatusChange}
+          removeStatus={handleRemoveStatus}
         />
       ))}
     </div>
@@ -40,7 +47,7 @@ export default function EditStatus(props) {
 }
 
 function Status(props) {
-  let { idx, id, date, columns, handleStatusChange } = props;
+  let { idx, id, date, columns, handleStatusChange, removeStatus, colLength } = props;
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   month = month.toString();
@@ -71,7 +78,7 @@ function Status(props) {
       <div className="divider"></div>
       <div className="options-container">
         <Options options={columns} selected={form.id} handleChange={handleOptionChange} />
-        <FontAwesomeIcon icon={faTimes} />
+        {colLength > 1 && <FontAwesomeIcon icon={faTimes} onClick={(e) => removeStatus(idx)} />}
       </div>
       <LabelGroup>
         <Label htmlFor={`statusDate${idx}`}>Date</Label>

@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from "enzyme";
+import { render } from "enzyme";
 import toJson from "enzyme-to-json";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import ApplicationsPage from "./ApplicationsPage";
 
 describe("ApplicationsPage Component", () => {
@@ -18,7 +18,11 @@ describe("ApplicationsPage Component", () => {
   });
 
   it("renders the UI as expected", () => {
-    const wrapper = shallow(<ApplicationsPage />);
+    const wrapper = render(
+      <MemoryRouter initialEntries={["/?app=1"]}>
+        <ApplicationsPage />
+      </MemoryRouter>
+    );
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
