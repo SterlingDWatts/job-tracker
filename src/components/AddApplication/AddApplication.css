@@ -5,11 +5,5 @@
 }
 
 .AddApplication button {
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  background-color: #21b0bf;
   min-width: 175px;
-  font-size: 16px;
 }

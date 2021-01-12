@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { Overlay, LabelGroup, Input, Label } from "../Utils/Utils";
+import { Overlay, LabelGroup, Input, Label, Button } from "../Utils/Utils";
 import ApplicationsContext from "../../contexts/ApplicationsContext/ApplicationsContext";
 import EditStatus from "../EditStatus/EditStatus";
 import "./LargeCardEdit.css";
@@ -78,7 +78,7 @@ export default function LargeCardEdit(props) {
           />
         </LabelGroup>
         <EditStatus application={application} columns={columns} />
-        <button type="submit">Save</button>
+        <Button type="submit">Save</Button>
       </form>
     </Overlay>
   );
